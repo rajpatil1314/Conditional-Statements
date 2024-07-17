@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">eng</label>
+    <input type="text" id="b1">
+    <br><br>
+    <label for="">gujarti</label>
+    <input type="text" id="j1">
+    <br><br>
+    <label for="">html</label>
+    <input type="text" id="p1">
+    <br><br>
+    <h1>
+        total is : <span id="ans"></span>
+    </h1>
+    <input type="submit" onclick="check()">
+    <input type="submit" value="grade" onclick="grade()">
+
+
+    <script>
+function check()
+{
+var cplus = document.getElementById('b1').value;
+var java = document.getElementById('j1').value;
+var php = document.getElementById('p1').value;
+var total= parseInt(cplus) + parseInt(java) + parseInt(php); 
+var ans = document.getElementById('ans');
+ans.innerHTML = total;
+
+}
+function grade()
+{
+    var cplus = document.getElementById('b1').value;
+var java = document.getElementById('j1').value;
+var php = document.getElementById('p1').value;
+var total= parseInt(cplus) + parseInt(java) + parseInt(php); 
+    var total;
+    if( total > 90)
+    {
+        alert(" A grade");
+    } 
+   else if( total > 70 && total <= 90)
+    {
+        alert(" B grade");
+    } 
+
+}
+
+    </script>
+</body>
+</html>

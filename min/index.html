@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">old password</label>
+    <input type="text" placeholder="old password" id="p1"><br><br>
+    <label for="">new password</label>
+    <input type="text" placeholder="new password " id="p2"><br><br>
+    <label for="">confirm password</label>
+    <input type="text" placeholder="confirm password " id="p3"><br><br>  
+     <input type="submit" onclick="check()">
+
+
+
+
+    <script>
+        function check()
+        {
+            var Password=  "raj";
+            var currentPassword = document.getElementById('p1').value;
+            var newPassword = document.getElementById('p2').value;
+            var confirmPassword = document.getElementById('p3').value;
+            if(currentPassword !== Password )
+                {
+                    alert("cuurent password does not match ");
+                    return false;
+        
+                }
+        if(newPassword !== confirmPassword)
+            {
+                alert("password does not matched ");
+                return false;
+            }
+          
+                alert("login succesfull");
+                return true;
+           
+          
+        }</script>
+</body>
+</html>
